@@ -1,7 +1,7 @@
 package com.online.store.controller;
 
-import com.online.store.service.brand.BrandDto;
-import com.online.store.service.brand.BrandService;
+import com.online.store.service.category.CategoryDto;
+import com.online.store.service.category.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -9,29 +9,29 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "v1/brands")
+@RequestMapping(path = "v1/categories")
 public class CategoryController {
 
     @Autowired
-    private BrandService brandService;
+    private CategoryService categoryService;
 
     @GetMapping
-    public ResponseEntity<Object> getBrands(Pageable pageable) {
-        return new ResponseEntity<>(brandService.findAll(pageable).getContent(), HttpStatus.OK);
+    public ResponseEntity<Object> getCategories(Pageable pageable) {
+        return new ResponseEntity<>(categoryService.findAll(pageable).getContent(), HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<Object> createBrand(@RequestBody BrandDto brandDto) {
-        return ResponseEntity.ok(brandService.createEntity(brandDto));
+    public ResponseEntity<Object> createCategory(@RequestBody CategoryDto categoryDto) {
+        return ResponseEntity.ok(categoryService.createEntity(categoryDto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Object> updateBrand(@PathVariable(value = "id") Long id, @RequestBody BrandDto brandDto) {
-        return ResponseEntity.ok(brandService.updateEntity(brandDto));
+    public ResponseEntity<Object> updateCategory(@PathVariable(value = "id") Long id, @RequestBody CategoryDto categoryDto) {
+        return ResponseEntity.ok(categoryService.updateEntity(categoryDto));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Object> deleteBrand(@PathVariable(value = "id") Long id) {
-        return ResponseEntity.ok(brandService.deleteEntity(id));
+    public ResponseEntity<Object> deleteCategory(@PathVariable(value = "id") Long id) {
+        return ResponseEntity.ok(categoryService.deleteEntity(id));
     }
 }
