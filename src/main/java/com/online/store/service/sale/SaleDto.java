@@ -4,13 +4,21 @@ import com.online.store.service.BaseDto;
 
 public class SaleDto extends BaseDto {
 
-    private String name;
+    private Double totalPrice;
 
-    public String getName() {
-        return name;
-    }
+    private Double totalImport;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    private Double totalImportPrice;
+
+    public Double getTotalPrice() { return totalPrice; }
+
+    public void setTotalPrice(Double totalPrice) { this.totalPrice = totalPrice; }
+
+    public Double getTotalImport() { return totalImport; }
+
+    public void setTotalImport(Double totalImport) { this.totalImport = totalImport; }
+
+    public Double getTotalImportPrice() { return totalImportPrice; }
+
+    public void setTotalImportPrice(Double totalImportPrice) { this.totalImportPrice = totalImportPrice; }
 }
