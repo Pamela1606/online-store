@@ -28,18 +28,79 @@ public class Item extends ModelBase {
     private Capacity capacity;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "item", cascade = CascadeType.ALL)
-    private Set<ItemImage> itemImages;
+    private Set<ItemSale> itemSales;
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "item", cascade = CascadeType.ALL)
+    private Set<Inventory> inventories;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "item", cascade = CascadeType.ALL)
+    private Set<ItemImage> itemImages;
 
     private String name;
 
     private String description;
 
-    private Double price;
+    private Float price;
 
-    private Double tax;
+    private Float tax;
 
-    private Double importPrice;
+    private Float importPrice;
+
+    public Brand getBrand() {
+        return brand;
+    }
+
+    public void setBrand(Brand brand) {
+        this.brand = brand;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public ModelItem getModelItem() {
+        return modelItem;
+    }
+
+    public void setModelItem(ModelItem modelItem) {
+        this.modelItem = modelItem;
+    }
+
+    public Capacity getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(Capacity capacity) {
+        this.capacity = capacity;
+    }
+
+    public Set<ItemSale> getItemSales() {
+        return itemSales;
+    }
+
+    public void setItemSales(Set<ItemSale> itemSales) {
+        this.itemSales = itemSales;
+    }
+
+    public Set<Inventory> getInventories() {
+        return inventories;
+    }
+
+    public void setInventories(Set<Inventory> inventories) {
+        this.inventories = inventories;
+    }
+
+    public Set<ItemImage> getItemImages() {
+        return itemImages;
+    }
+
+    public void setItemImages(Set<ItemImage> itemImages) {
+        this.itemImages = itemImages;
+    }
 
     public String getName() {
         return name;
@@ -57,43 +118,27 @@ public class Item extends ModelBase {
         this.description = description;
     }
 
-    public Double getPrice() { return price; }
+    public Float getPrice() {
+        return price;
+    }
 
-    public void setPrice(Double price) {
+    public void setPrice(Float price) {
         this.price = price;
     }
 
-    public Double getTax() {
+    public Float getTax() {
         return tax;
     }
 
-    public void setTax(Double tax) { this.tax = tax; }
+    public void setTax(Float tax) {
+        this.tax = tax;
+    }
 
-    public Double getImportPrice() {
+    public Float getImportPrice() {
         return importPrice;
     }
 
-    public void setImportPrice(Double importPrice) {
+    public void setImportPrice(Float importPrice) {
         this.importPrice = importPrice;
     }
-
-    public Brand getBrand() { return brand; }
-
-    public void setBrand(Brand brand) { this.brand = brand; }
-
-    public Category getCategory() { return category; }
-
-    public void setCategory(Category category) { this.category = category; }
-
-    public ModelItem getModelItem() { return modelItem; }
-
-    public void setModelItem(ModelItem modelItem) { this.modelItem = modelItem; }
-
-    public Capacity getCapacity() { return capacity; }
-
-    public void setCapacity(Capacity capacity) { this.capacity = capacity; }
-
-    public Set<ItemImage> getItemImages() { return itemImages; }
-
-    public void setItemImages(Set<ItemImage> itemImages) { this.itemImages = itemImages; }
 }

@@ -1,7 +1,7 @@
 package com.online.store.service.capacity;
 
 import com.online.store.models.Capacity;
-import com.online.store.reporsitory.CapacityRepository;
+import com.online.store.repository.CapacityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

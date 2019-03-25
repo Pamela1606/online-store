@@ -1,7 +1,7 @@
 package com.online.store.service.itemImage;
 
 import com.online.store.models.ItemImage;
-import com.online.store.reporsitory.ItemImageRepository;
+import com.online.store.repository.ItemImageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

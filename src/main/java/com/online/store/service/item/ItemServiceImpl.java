@@ -1,7 +1,7 @@
 package com.online.store.service.item;
 
 import com.online.store.models.Item;
-import com.online.store.reporsitory.ItemRepository;
+import com.online.store.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

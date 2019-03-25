@@ -1,7 +1,7 @@
 package com.online.store.service.customer;
 
 import com.online.store.models.Customer;
-import com.online.store.reporsitory.CustomerRepository;
+import com.online.store.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

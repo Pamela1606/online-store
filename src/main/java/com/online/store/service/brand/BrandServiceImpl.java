@@ -1,7 +1,7 @@
 package com.online.store.service.brand;
 
 import com.online.store.models.Brand;
-import com.online.store.reporsitory.BrandRepository;
+import com.online.store.repository.BrandRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

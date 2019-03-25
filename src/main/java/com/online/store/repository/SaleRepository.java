@@ -1,4 +1,4 @@
-package com.online.store.reporsitory;
+package com.online.store.repository;
 
 import com.online.store.models.Sale;
 import org.springframework.data.jpa.repository.JpaRepository;

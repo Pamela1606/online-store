@@ -1,7 +1,7 @@
 package com.online.store.service.inventoryState;
 
 import com.online.store.models.InventoryState;
-import com.online.store.reporsitory.InventoryStateRepository;
+import com.online.store.repository.InventoryStateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

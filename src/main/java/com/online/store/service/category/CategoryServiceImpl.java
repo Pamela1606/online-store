@@ -1,7 +1,7 @@
 package com.online.store.service.category;
 
 import com.online.store.models.Category;
-import com.online.store.reporsitory.CategoryRepository;
+import com.online.store.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
